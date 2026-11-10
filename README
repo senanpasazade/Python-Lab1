@@ -1,0 +1,96 @@
+Laboratoriya İşi № 8: Funksiyalar (Functions)
+
+Bu layihə Fundamentals of Programming 1 fənni üzrə Eric Matthes-in "Python Crash Course" (Chapter 8) dərslik materialları əsasında hazırlanmış laboratoriya tapşırıqlarını, modul strukturunu və tələbə jurnalı mini layihəsini əhatə edir.
+
+ Qovluq və Fayl Strukturu
+
+lab8_Soyad_Ad/
+│
+├── utils.py           # Tapşırıq 2, 3, 5 və 6-da tələb olunan köməkçi funksiyalar modulu
+├── lab8_main.py       # Tapşırıq 1, 4, 5, 6 və 7-nin icra olunduğu əsas fayl
+├── task8_fixed.py     # Tapşırıq 8-dəki xətaların düzəldilmiş versiyası
+├── bonus_journal.py   # Bonus: "Tələbə jurnalı v2" mini layihəsi
+├── report.txt         # Nəzəri suallar, proqnozlar və xətalar cədvəli olan hesabat faylı
+└── README.md          # Layihə haqqında ümumi məlumat faylı
+
+
+ Faylların Məzmunu və İcra Qaydası
+
+1. utils.py
+
+Funksiyaların modul şəklində saxlanması üçün yaradılmışdır. Aşağdakı funksiyaları ehtiva edir:
+
+add_vat(price, vat_percent=18): Qiymətə ƏDV əlavə edir.
+
+build_username(first, last, year=""): Kiçik hərflərlə istifadəçi adı yaradır.
+
+add_bonus(scores, bonus): Orijinal listi yerində dəyişərək bonus əlavə edir.
+
+with_bonus(scores, bonus): Orijinal listə toxunmadan yeni list qaytarır.
+
+average(*numbers): İxtiyari sayda ədədin orta qiymətini hesablayır (*args).
+
+make_course(code, **details): Kurs məlumatlarını dict kimi qaytarır (**kwargs).
+
+2. lab8_main.py
+
+Əsas tapşırıqların işlək kodlarını nümayiş etdirir.
+
+Mövqeli və açar sözlü arqumentlərin çağırılması (print_student_card).
+
+while dövrü ilə dictionary qaytaran funksiyanın inteqrasiyası (make_student).
+
+Mutable listlərin funksiyaya kopyalanaraq və ya birbaşa ötürülməsi nümunələri.
+
+utils modulunun müxtəlif üsullarla (import, from ... import, as) import olunması.
+
+İşə salmaq üçün:
+
+python lab8_main.py
+
+
+3. task8_fixed.py
+
+Sintaksis və məntiq xətaları olan kodların düzəldilmiş versiyasıdır.
+
+İşə salmaq üçün:
+
+python task8_fixed.py
+
+
+4. bonus_journal.py (Mini Layihə)
+
+İstifadəçi menyusu vasitəsilə tələbələrin bal siyahısını idarə edən konsol tətbiqidir. utils.py modulundakı make_student funksiyasından istifadə edir.
+
+Funksionallıq:
+
+1: Yeni tələbə və bal əlavə etmək.
+
+2: Siyahını, orta balı və ən yüksək ballı tələbəni göstərən hesabat almaq.
+
+3: Proqramdan çıxmaq.
+
+İşə salmaq üçün:
+
+python bonus_journal.py
+
+
+Hesabat Faylı (report.txt)
+
+Hesabat faylında aşağıdakı bölmələr tam cavablandırılmışdır:
+
+Hissə A (Proqnozlar və izahlar): Kodların icrasından əvvəlki proqnozlar, print və return fərqləri, kopyalama mexanizmi ([:]).
+
+Hissə B (Yazılı Cavablar): Arqument xətaları, default parametrlərin ardıcıllıq qaydaları, import * istifadəsinin mənfi cəhətləri.
+
+Tapşırıq 8 Cədvəli: Xətaların növü, yeri və necə düzəldildiyini göstərən tam cədvəl.
+
+Nəzərdə Tutulmuş Üslub Qaydaları (PEP 8)
+
+Funksiya adları kiçik hərflərlə və snake_case formatındadır.
+
+Hər funksiya üçün docstring ("""...""") yazılmışdır.
+
+Funksiyalar arasında 2 boş sətir buraxılmışdır.
+
+Default parametrlərdə mənimsətmə operatoru ətrafında boşluq saxlanılmamışdır (vat_percent=18).
