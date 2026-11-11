@@ -3,7 +3,6 @@ def print_student_card(name, group, year):
     print("Group: " + group)
     print("Year: " + str(year))
 
-
 # Positional arguments
 print_student_card("Aysel Mammadova", "CE-101", 1)
 
