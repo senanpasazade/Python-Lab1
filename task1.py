@@ -3,7 +3,5 @@ def print_student_card(name, group, year):
     print("Group: " + group)
     print("Year: " + str(year))
 
-name=input("put name :  ")
-group=input("put group :  ")
-year=int(input("put year :  ")
-print_student_card(name, group, year)
+
+print_student_card(name=input("put name :  "), group=input("put group :  "), year=int(input("put year :  ")))
